@@ -7,10 +7,9 @@ html {
 
 body, html {
   margin: 0;
-  margin-bottom: 5vh;
   margin-top: 6vh;
   padding: 0;
-  background: radial-gradient(ellipse at bottom, purple, rgb(19, 95, 79) 80%);
+  background: radial-gradient(ellipse at center, rgb(182, 105, 182), rgb(184, 221, 213) 80%);
 }
 
 #nav {
@@ -18,7 +17,7 @@ body, html {
   height: 8vh;
   background-color: #0303250a;
   display: flex;
-  justify-content: center;
+  justify-content: right;
   align-items: center;
   position: fixed;
   top: 0; left: 0;
@@ -29,7 +28,7 @@ body, html {
   color:white;
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
-  font-size: 3.8vh;
+  font-size: 1.5vh;
   width: max-content;
   margin: 2.5vh;
   user-select: none;
@@ -43,12 +42,10 @@ a {
   color: #4a2545;
 }
 
-h1 {
+h3 {
   color: white;
   text-align: center;
   font-family: 'Poppins', sans-serif;
-  font-size: 3.3vw;
-  margin-top: 5vh;
   margin-bottom: 0;
 }
 
@@ -65,8 +62,8 @@ h2 {
   width: 100%;
   display: flex;
   justify-content: center;
-  box-shadow: rgba(219, 210, 210, 0.17) 0px -23px 25px 0px inset, rgba(77, 60, 60, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
-}
+  padding-bottom: 40px;
+}  
 
 #map {
   width: 80vw;
@@ -86,14 +83,13 @@ h2 {
 
 #weather_container .day {
   transform:translateY(10vh);
-  background-color: #32a575;
+  background-color: #f3dede;
   width: 10vw;
   min-height: 20vw;
   max-height: max-content;
   border-radius: 8px;
   box-shadow: .2vw .2vw 6px black;
   text-align: center;
-  padding-bottom: 1vh;
   padding-top: 1vh;
   z-index: 3;
 }
@@ -101,18 +97,19 @@ h2 {
 .day p {
   font-family: 'Poppins', sans-serif;
   font-size: 1.2vw;
-  margin: .5vw;
+;
 }
+
 
 .day img {
   display: block;
-  width: 5vw;
-  height: 5vw;
+  width: 6vw;
+  height: 6vw;
   margin: auto;
 }
 
-.day p:nth-child(1) {
-  text-decoration: underline;
+.day p:nth-child(2) {
+  font-size: 2.5vh;
 }
 
 .day p:nth-child(4) {
@@ -196,7 +193,7 @@ details li {
 
   .day p {
     font-family: 'Poppins', sans-serif;
-    font-size: 3vw;
+    font-size: 4vw;
     margin: .5vw;
   }
 
@@ -228,4 +225,16 @@ details li {
 
 footer {
   color: white;
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 10px;
+  margin-top: 20px;
+  justify-content: right;
+  align-items: center;
+  padding-right: 20px;
+  
+}
+
+.fa-github-alt {
+  padding-left: 10px;
 }

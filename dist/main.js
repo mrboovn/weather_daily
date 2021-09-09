@@ -1,7 +1,7 @@
 /////* Data */////
 
-activeLat = 51.505;
-activeLong = -0.09;
+activeLat = 37.757;
+activeLong = -122.472;
 
 var daysoftheweek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
 
@@ -210,20 +210,27 @@ async function pullData(link) { // Grabs data from API
 
 }
 
+String.prototype.capitalize = function() {
+  let first = this.slice(0,1).toUpperCase()
+  let rest = this.slice(1)
+  return first.concat(rest);
+}
+
+
 function initializeWeatherCards(info) {
   let day = document.getElementsByClassName('day');
 
   for (i = 0; i < day.length; i++) {
     day[i].getElementsByTagName('p')[0].innerHTML = info[i].dotw;
     day[i].getElementsByTagName('p')[1].innerHTML = info[i].date;
-    day[i].getElementsByTagName('p')[2].innerHTML = info[i].desc;
+    day[i].getElementsByTagName('p')[2].innerHTML = info[i].desc.capitalize();
     day[i].getElementsByTagName('img')[0].src = 'http://openweathermap.org/img/wn/' + info[i].icon + '@2x.png'
-    day[i].getElementsByTagName('p')[3].innerHTML = 
-    ((parseInt(info[i].celsius.morn) + 
-     parseInt(info[i].celsius.day) + 
-     parseInt(info[i].celsius.eve) + 
-     parseInt(info[i].celsius.night))
-      / 4) + ' C°'; 
+    // day[i].getElementsByTagName('p')[3].innerHTML = 
+    // ((parseInt(info[i].celsius.morn) + 
+    //  parseInt(info[i].celsius.day) + 
+    //  parseInt(info[i].celsius.eve) + 
+    //  parseInt(info[i].celsius.night))
+    //   / 4) + ' C°'; 
     day[i].getElementsByTagName('p')[4].innerHTML = 
     ((parseInt(info[i].fahrenheit.morn) + 
      parseInt(info[i].fahrenheit.day) + 
